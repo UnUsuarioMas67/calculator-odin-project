@@ -20,19 +20,21 @@ body {
 
 .display {
   display: flex;
-  justify-content: end;
-  align-items: end;
+  flex-direction: column;
+  justify-content: space-between;
 
   height: 55px;
   background-color: rgb(105, 179, 105);
   border-radius: 5px;
   margin-bottom: 20px;
-  padding: 2px 8px;
+  padding: 4px 8px 2px;
+
+  color: rgb(10, 36, 10);
 }
 
 .number {
   font-size: 1.4rem;
-  color: rgb(10, 36, 10);
+  align-self: end;
 }
 
 .buttons {
