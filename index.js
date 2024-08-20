@@ -43,6 +43,9 @@ buttons.forEach((item) => {
       case "=":
         doCalculation();
         break;
+      case "DEL":
+        backspace();
+        break;
       default:
         updateDisplay(item.textContent);
         break;
@@ -116,3 +119,8 @@ const doCalculation = function () {
   secondNumber = undefined;
   operator = undefined;
 };
+
+const backspace = function () {
+  const slicedString = numberElem.textContent.slice(0, numberElem.textContent.length - 1);
+  numberElem.textContent = slicedString;
+}
