@@ -20,6 +20,7 @@ const operate = function (operator, n1, n2) {
 
 const buttons = document.querySelectorAll(".btn");
 const numberElem = document.querySelector(".number");
+const previewElem = document.querySelector(".preview");
 
 let firstNumber, secondNumber, operator;
 
@@ -55,6 +56,7 @@ buttons.forEach((item) => {
 
 const clearCalculator = function () {
   numberElem.textContent = "";
+  previewElem.textContent = "";
   firstNumber = undefined;
   secondNumber = undefined;
   operator = undefined;
@@ -105,6 +107,7 @@ const setOperator = function (op) {
   firstNumber = firstNumber || parseFloat(numberElem.textContent);
   operator = op;
   numberElem.textContent = "";
+  previewElem.textContent = `${firstNumber}${operator}`
 };
 
 const doCalculation = function () {
@@ -114,6 +117,8 @@ const doCalculation = function () {
 
   // get second number
   secondNumber = parseFloat(numberElem.textContent);
+
+  previewElem.textContent = `${firstNumber}${operator}${secondNumber}`;
 
   const result = operate(operator, firstNumber, secondNumber);
   const resultRounded = Math.round(result * 10000) / 10000; // round to 4 decimals
