@@ -52,14 +52,20 @@ body {
   border-radius: 5px;
 }
 
-.btn.clear {
-  grid-column: 1/5;
+.btn.clear, .btn.sign {
   height: calc(var(--size) / 2);
+}
+
+.btn.clear {
   color: white;
   background-color: rgb(238, 66, 102);
 }
 
-.btn.operator {
+.btn.sign {
+  grid-column: 4/5;
+}
+
+.btn.operator, .btn.sign {
   color: white;
   background-color: rgb(47, 54, 69);
   font-weight: bold;
