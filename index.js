@@ -62,9 +62,13 @@ const clearCalculator = function () {
 
 const changeSign = function () {
   const parsedNumber = parseFloat(numberElem.textContent);
+  if (isNaN(parsedNumber) || parsedNumber === 0) {
+    return;
+  }
 
-  if (!isNaN(parsedNumber) && parsedNumber !== 0) {
-    numberElem.textContent = parsedNumber * -1;
+  numberElem.textContent = parsedNumber * -1;
+  if (firstNumber) {
+    firstNumber = parsedNumber * -1;
   }
 };
 
