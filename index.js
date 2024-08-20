@@ -82,11 +82,8 @@ const updateDisplay = function (n) {
     firstNumber = undefined;
   }
 
-  if (n === "." && numberElem.textContent === "") {
-    numberElem.textContent += "0.";
-  } else {
-    numberElem.textContent += n;
-  }
+  numberElem.textContent +=
+    n === "." && numberElem.textContent === "" ? "0." : n;
 };
 
 const setOperator = function (op) {
