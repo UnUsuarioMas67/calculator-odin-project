@@ -12,7 +12,7 @@ body {
 }
 
 #calculator {
-  background-color: rgb(47, 54, 69);
+  background-color: rgb(22, 28, 39);
   width: fit-content;
   padding: 15px;
   border-radius: 10px;
@@ -61,9 +61,11 @@ body {
 
 .btn.operator {
   color: white;
-  background-color: rgb(22, 28, 39);
+  background-color: rgb(47, 54, 69);
   font-weight: bold;
 }
+
+
 
 .btn:hover {
   filter: brightness(1.1);
