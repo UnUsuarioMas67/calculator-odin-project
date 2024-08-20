@@ -19,7 +19,7 @@ const operate = function (operator, n1, n2) {
 };
 
 const buttons = document.querySelectorAll(".btn");
-const numberElem = document.querySelector(".display > p");
+const numberElem = document.querySelector(".number");
 
 let firstNumber, secondNumber, operator;
 

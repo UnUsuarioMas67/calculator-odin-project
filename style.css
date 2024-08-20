@@ -30,7 +30,7 @@ body {
   padding: 2px 8px;
 }
 
-.display > p {
+.number {
   font-size: 1.4rem;
   color: rgb(10, 36, 10);
 }
